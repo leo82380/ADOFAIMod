@@ -24,7 +24,7 @@ namespace AdofaiMod2
 
     public static class PatchTest
     {
-        [HarmonyPatch(typeof(TestClass), "Test")]
+        //[HarmonyPatch(typeof(TestClass), "Test")]
         public static class TestReturn
         {
             public static bool Prefix(TestClass __instance, string __pri, int n)
