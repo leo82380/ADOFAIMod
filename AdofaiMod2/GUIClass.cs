@@ -2,7 +2,8 @@
 using UnityEngine;
 
 namespace AdofaiMod2
-{public class GUIClass : MonoBehaviour
+{
+    public class GUIClass : MonoBehaviour
     {
         public string text = string.Empty;
         public void OnGUI()

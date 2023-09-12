@@ -294,6 +294,7 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="ClsTextClass.cs" />
         <Compile Include="GUIClass.cs" />
         <Compile Include="Main.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
