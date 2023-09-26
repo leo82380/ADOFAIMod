@@ -46,15 +46,6 @@ namespace AdofaiMod2
         
         private static void OnGUI(UnityModManager.ModEntry modEntry)
         {
-            if (GUILayout.Button("준표 59"))
-            {
-                var isFiveNine = false;
-                if (isFiveNine)
-                    isFiveNine = false;
-                if(!isFiveNine)
-                    isFiveNine = true;
-                ClsTextClass.JunPyoFiveNine(isFiveNine);
-            }
             if(GUILayout.Button("TextUpdate"))
             {
                 if (ADOBase.isScnGame)

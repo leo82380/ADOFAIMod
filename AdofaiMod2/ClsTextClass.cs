@@ -58,25 +58,6 @@ namespace AdofaiMod2
             }
         }
         
-        public static void JunPyoFiveNine(bool isFiveNine)
-        {
-            TextMeshProUGUI junpyo = null;
-            if (isFiveNine)
-            {
-                junpyo = new GameObject().AddComponent<TextMeshProUGUI>();
-                junpyo.rectTransform.SetParent(GameObject.Find("Canvas").transform);
-                junpyo.rectTransform.anchoredPosition = Vector2.left;
-                junpyo.gameObject.transform.localPosition = new Vector3(100f, 100f, 0f);
-                junpyo.text = "준표는 59";
-                junpyo.font = RDString.GetFontDataForLanguage(RDString.language).fontTMP;
-                junpyo.overflowMode = TextOverflowModes.Overflow;
-                junpyo.fontSize = 100;
-                Object.DontDestroyOnLoad(junpyo);
-            }
-            else
-            {
-                Object.DestroyImmediate(junpyo);
-            }
-        }
+        
     }
 }
