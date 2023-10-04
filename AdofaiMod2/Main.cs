@@ -70,6 +70,13 @@ namespace AdofaiMod2
                 }
             }
             GUILayout.Label("조심! 얼불 크래시");
+
+            if (GUILayout.Button("서버"))
+            {
+                ClsTextClass.Data();
+            }
+
+            GUILayout.Label("서버 연결?");
         }
         
         private static void OnSaveGUI(UnityModManager.ModEntry modEntry)

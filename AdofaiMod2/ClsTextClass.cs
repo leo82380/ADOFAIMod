@@ -1,11 +1,19 @@
-﻿using TMPro;
+﻿using System;
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
+using Object = UnityEngine.Object;
 
 namespace AdofaiMod2
 {
-    public class ClsTextClass
+    public class ClsTextClass : MonoBehaviour
     {
+        public static string host = "localhost";
+        public static string port = "5000";
+        
+        UnityWebRequest www;
         public static void ImageLoad()
         {
             Image image = new GameObject().AddComponent<Image>();
@@ -57,7 +65,25 @@ namespace AdofaiMod2
                 break;
             }
         }
-        
-        
+
+        public void Data()
+        {
+            StartCoroutine(TestGet());
+        }
+
+        private IEnumerator TestGet()
+        {
+            var www = UnityWebRequest.Get("http://" + host + ":" + port + "/test.txt");
+            yield return www.SendWebRequest();
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log(www.uri.ToString());
+                Debug.Log(www.downloadHandler.text);
+            }
+        }
     }
 }
